@@ -58,11 +58,14 @@ ${context}
       }
     );
 
+    console.log("STATUS:", response.status);
 
+    console.log("GROQ KEY EXISTS:", !!process.env.GROQ_API_KEY);
+    console.log("GROQ KEY LENGTH:", process.env.GROQ_API_KEY?.length);
     const data = await response.json();
 
 
-    console.log("STATUS:", response.status);
+    
     console.log("DATA GROQ:", JSON.stringify(data, null, 2));
 
 

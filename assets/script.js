@@ -95,8 +95,16 @@ const KB = buildKnowledgeBase();
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ message: query, context: knowledgeBaseToText(KB) })
     });
+
     const data = await res.json();
-    addMessage(data.reply || "Je n'ai pas de réponse pour ça, essaie la section Contact.", 'bot');
+    console.log("API RESPONSE:", data);
+
+    if (!res.ok) {
+      addMessage("Erreur API : " + (data.error || "inconnue"), "bot");
+      return;
+    }
+
+    addMessage(data.reply, "bot");
   } catch (err) {
     addMessage("Connexion au serveur impossible pour le moment.", 'bot');
   }

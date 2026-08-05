@@ -58,16 +58,8 @@ ${context}
       }
     );
 
-    console.log("STATUS:", response.status);
-
-    console.log("GROQ KEY EXISTS:", !!process.env.GROQ_API_KEY);
-    console.log("GROQ KEY LENGTH:", process.env.GROQ_API_KEY?.length);
-    const data = await response.json();
-
-
     
-    console.log("DATA GROQ:", JSON.stringify(data, null, 2));
-
+    const data = await response.json();
 
     if (!response.ok) {
       return res.status(response.status).json({
@@ -86,9 +78,7 @@ ${context}
 
 
   } catch (err) {
-
     console.error(err);
-
     return res.status(500).json({
       error: "Erreur serveur"
     });

@@ -19,8 +19,14 @@ export default async function handler(req, res) {
     });
 
     const data = await response.json();
-    const reply = data.candidates?.[0]?.content?.parts?.[0]?.text || "Désolé, je n'ai pas pu générer de réponse.";
-    res.status(200).json({ reply });
+
+  console.log("STATUS:", response.status);
+  console.log("DATA GEMINI:", JSON.stringify(data, null, 2));
+
+  const reply = data.candidates?.[0]?.content?.parts?.[0]?.text 
+  || JSON.stringify(data);
+
+  res.status(200).json({ reply });
   } catch (err) {
     res.status(500).json({ error: 'Erreur serveur' });
   }

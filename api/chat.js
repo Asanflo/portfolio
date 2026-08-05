@@ -1,33 +1,94 @@
 export default async function handler(req, res) {
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Method not allowed' });
+  }
 
   const { message, context } = req.body;
-  if (!message) return res.status(400).json({ error: 'message requis' });
+
+  if (!message) {
+    return res.status(400).json({ error: 'message requis' });
+  }
+
 
   try {
-    const url =`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${process.env.GEMINI_API_KEY}`;
 
-    const response = await fetch(url, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        system_instruction: {
-          parts: [{ text: `Tu es l'assistant du portfolio de Florentin Agassem. Réponds UNIQUEMENT à partir des informations ci-dessous, en français, de façon brève et chaleureuse. Si l'info n'y est pas, invite la personne à utiliser la section Contact.\n\n${context}` }]
+    const response = await fetch(
+      "https://api.groq.com/openai/v1/chat/completions",
+      {
+        method: "POST",
+
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": `Bearer ${process.env.GROQ_API_KEY}`
         },
-        contents: [{ parts: [{ text: message }] }]
-      })
-    });
+
+        body: JSON.stringify({
+
+          model: "llama-3.1-8b-instant",
+
+          messages: [
+            {
+              role: "system",
+              content: `
+Tu es l'assistant du portfolio de Florentin Agassem.
+
+Réponds UNIQUEMENT à partir des informations ci-dessous,
+en français, de façon brève et chaleureuse.
+
+Si l'information n'y est pas, invite la personne à utiliser
+la section Contact.
+
+Informations du portfolio :
+
+${context}
+`
+            },
+
+            {
+              role: "user",
+              content: message
+            }
+          ],
+
+          temperature: 0.5,
+          max_tokens: 300
+
+        })
+      }
+    );
+
 
     const data = await response.json();
 
-  console.log("STATUS:", response.status);
-  console.log("DATA GEMINI:", JSON.stringify(data, null, 2));
 
-  const reply = data.candidates?.[0]?.content?.parts?.[0]?.text 
-  || JSON.stringify(data);
+    console.log("STATUS:", response.status);
+    console.log("DATA GROQ:", JSON.stringify(data, null, 2));
 
-  res.status(200).json({ reply });
+
+    if (!response.ok) {
+      return res.status(response.status).json({
+        error: data.error?.message || "Erreur Groq"
+      });
+    }
+
+
+    const reply =
+      data.choices?.[0]?.message?.content
+      ||
+      "Désolé, je n'ai pas pu générer de réponse.";
+
+
+    return res.status(200).json({ reply });
+
+
   } catch (err) {
-    res.status(500).json({ error: 'Erreur serveur' });
+
+    console.error(err);
+
+    return res.status(500).json({
+      error: "Erreur serveur"
+    });
+
   }
 }

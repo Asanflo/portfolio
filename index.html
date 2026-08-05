@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Florentin Agassem — Junior Back-end Developer</title>
+<link rel="stylesheet" href="assets/style.css">
+<meta name="description" content="Portfolio d'Agassem Sanda Florentin, étudiant ingénieur en Génie Logiciel à l'ENSPD, Junior Back-end Developer spécialisé Django, Spring Boot et architecture cloud.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-row row-social wrap">
+    <div class="social-links">
+      <a href="https://github.com/Asanflo" target="_blank" rel="noopener" aria-label="GitHub">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.9 5.33.9 11.6c0 5.02 3.26 9.28 7.78 10.78.57.1.78-.25.78-.55v-2.1c-3.17.69-3.84-1.36-3.84-1.36-.52-1.31-1.27-1.66-1.27-1.66-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.24 3.34.95.1-.74.4-1.24.72-1.53-2.53-.29-5.2-1.27-5.2-5.63 0-1.24.44-2.26 1.17-3.06-.12-.29-.51-1.45.11-3.03 0 0 .96-.31 3.14 1.17a10.9 10.9 0 0 1 5.72 0c2.18-1.48 3.14-1.17 3.14-1.17.62 1.58.23 2.74.11 3.03.73.8 1.17 1.82 1.17 3.06 0 4.37-2.68 5.34-5.23 5.62.41.36.78 1.07.78 2.16v3.2c0 .3.21.66.79.55A11.11 11.11 0 0 0 23.1 11.6C23.1 5.33 18.27.5 12 .5Z"/></svg>
+      </a>
+      <a href="https://linkedin.com/in/florentin-agassem/" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.14 1.45-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg>
+      </a>
+    </div>
+    <div class="status-badge">
+      <span class="status-dot"></span>
+      disponible · Douala, Cameroun
+    </div>
+  </div>
+
+  <div class="header-row row-nav">
+    <nav class="main-nav">
+      <a href="#home">Home</a>
+      <a href="#projects">Projets</a>
+      <a href="#skills">Skills</a>
+      <a href="#parcours">Parcours</a>
+      <a href="#knowme">Know me</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Changer de thème">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="mobile-panel" id="mobilePanel">
+    <div class="mobile-panel-inner">
+      <a class="mp-link" href="#home">Home</a>
+      <a class="mp-link" href="#projects">Projets</a>
+      <a class="mp-link" href="#skills">Skills</a>
+      <a class="mp-link" href="#parcours">Parcours</a>
+      <a class="mp-link" href="#knowme">Know me</a>
+      <a class="mp-link" href="#contact">Contact</a>
+      <a class="btn btn-primary" href="assets/CV_Florentin_Agassem.pdf" download>Télécharger le CV</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- HOME -->
+  <section id="home" class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-left">
+        <div class="eyebrow">Junior Back-end Developer · Software Engineering Student</div>
+        <h1 class="hero-name display">Agassem Sanda <span class="prenom">Florentin</span></h1>
+        <p class="hero-desc">
+          Étudiant ingénieur en Génie Logiciel, spécialisé en développement backend et passionné
+          par l'architecture logicielle — avec l'ambition claire de devenir Cloud Architect.
+          Solide maîtrise de l'UML, de Merise, des design patterns et des fondamentaux du cloud computing.
+        </p>
+        <div class="hero-social">
+          <a href="https://github.com/Asanflo" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.9 5.33.9 11.6c0 5.02 3.26 9.28 7.78 10.78.57.1.78-.25.78-.55v-2.1c-3.17.69-3.84-1.36-3.84-1.36-.52-1.31-1.27-1.66-1.27-1.66-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.24 3.34.95.1-.74.4-1.24.72-1.53-2.53-.29-5.2-1.27-5.2-5.63 0-1.24.44-2.26 1.17-3.06-.12-.29-.51-1.45.11-3.03 0 0 .96-.31 3.14 1.17a10.9 10.9 0 0 1 5.72 0c2.18-1.48 3.14-1.17 3.14-1.17.62 1.58.23 2.74.11 3.03.73.8 1.17 1.82 1.17 3.06 0 4.37-2.68 5.34-5.23 5.62.41.36.78 1.07.78 2.16v3.2c0 .3.21.66.79.55A11.11 11.11 0 0 0 23.1 11.6C23.1 5.33 18.27.5 12 .5Z"/></svg>
+          </a>
+          <a href="https://linkedin.com/in/florentin-agassem/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.14 1.45-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg>
+          </a>
+        </div>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="assets/CV_Florentin_Agassem.pdf" download>Télécharger mon CV</a>
+          <a class="btn btn-ghost" href="#contact">Me contacter</a>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="chat-card">
+          <div class="chat-head">
+            <div class="chat-avatar">F</div>
+            <div class="chat-head-text">
+              <strong>Assistant de Florentin</strong>
+              <span><span class="status-dot" style="width:6px;height:6px;"></span>en ligne</span>
+            </div>
+          </div>
+          <div class="chat-body" id="chatBody">
+            <div class="msg bot">Salut 👋 Pose-moi une question sur le parcours, les projets ou les compétences de Florentin.</div>
+          </div>
+          <div class="chat-suggestions">
+            <button class="chip-btn" data-q="projets">Ses projets ?</button>
+            <button class="chip-btn" data-q="stack">Sa stack technique ?</button>
+            <button class="chip-btn" data-q="etudes">Son parcours ?</button>
+          </div>
+          <div class="chat-input-row">
+            <input type="text" id="chatInput" placeholder="Écris ta question…" aria-label="Message">
+            <button class="chat-send" id="chatSend" aria-label="Envoyer">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KNOW ME -->
+  <section id="knowme">
+    <div class="wrap knowme-grid">
+      <div class="knowme-text">
+        <div class="eyebrow">À propos</div>
+        <h2 class="section-title display">Know me</h2>
+        <p>Je suis étudiant ingénieur en Génie Logiciel, spécialisé en développement backend et passionné par l'architecture logicielle. Je maîtrise l'UML, Merise et les design patterns, et je vise à devenir Cloud Architect avec l'ambition d'avoir un impact réel dans le domaine de la tech en Afrique.</p>
+        <p>Mon parcours s'est construit sur le terrain : Au cours de mes stages, j'ai conçu des applications web et évalué des risques d'infrastructure réseau, en plus de mes projets personnels en Django, Spring Boot et Angular.</p>
+        <p>Je parle français (langue maternelle), anglais (intermédiaire) et un peu de japonais. En dehors du code, je m'intéresse à la lecture, aux anime/manga et à la culture tech au sens large.</p>
+      </div>
+      <div class="cv-panel">
+        <div class="photo-frame">
+          <div class="photo-glow"></div>
+          <div class="photo-slot">
+            <img src="assets/florentin.png" alt="Florentin Agassem">
+            
+          </div>
+          <div class="floating-card">
+            <span class="status-dot"></span>
+            <div class="file-row">
+              <div class="file-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              </div>
+              <div>
+                <h4>Curriculum Vitae</h4>
+                <p>PDF · à jour</p>
+              </div>
+            </div>
+            <a class="btn btn-primary" href="assets/CV_Florentin_Agassem.pdf" download>Télécharger</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="wrap">
+      <div class="eyebrow">Sélection</div>
+      <h2 class="section-title display">Projets</h2>
+      <div class="projects-grid">
+
+        <div class="project-card">
+          <div class="project-top">
+            <div class="project-title">TrustTrade</div>
+            <div class="project-links">
+              <a class="project-link" href="https://github.com/Asanflo/trusttrade" target="_blank" rel="noopener" aria-label="Code sur GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.9 5.33.9 11.6c0 5.02 3.26 9.28 7.78 10.78.57.1.78-.25.78-.55v-2.1c-3.17.69-3.84-1.36-3.84-1.36-.52-1.31-1.27-1.66-1.27-1.66-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.24 3.34.95.1-.74.4-1.24.72-1.53-2.53-.29-5.2-1.27-5.2-5.63 0-1.24.44-2.26 1.17-3.06-.12-.29-.51-1.45.11-3.03 0 0 .96-.31 3.14 1.17a10.9 10.9 0 0 1 5.72 0c2.18-1.48 3.14-1.17 3.14-1.17.62 1.58.23 2.74.11 3.03.73.8 1.17 1.82 1.17 3.06 0 4.37-2.68 5.34-5.23 5.62.41.36.78 1.07.78 2.16v3.2c0 .3.21.66.79.55A11.11 11.11 0 0 0 23.1 11.6C23.1 5.33 18.27.5 12 .5Z"/></svg></a>
+            </div>
+          </div>
+          <p class="project-desc">Back-end e-commerce en micro-services avec Spring Boot, pensé pour découpler les processus métier et sécuriser la conception des API. En cours de développement depuis janvier 2026.</p>
+          <div class="tag-row">
+            <span class="tag">Spring Boot</span><span class="tag">Micro-services</span><span class="tag">API sécurisée</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-top">
+            <div class="project-title">Aproj</div>
+            <div class="project-links">
+              <a class="project-link" href="https://github.com/Asanflo/aproj" target="_blank" rel="noopener" aria-label="Code sur GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.9 5.33.9 11.6c0 5.02 3.26 9.28 7.78 10.78.57.1.78-.25.78-.55v-2.1c-3.17.69-3.84-1.36-3.84-1.36-.52-1.31-1.27-1.66-1.27-1.66-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.24 3.34.95.1-.74.4-1.24.72-1.53-2.53-.29-5.2-1.27-5.2-5.63 0-1.24.44-2.26 1.17-3.06-.12-.29-.51-1.45.11-3.03 0 0 .96-.31 3.14 1.17a10.9 10.9 0 0 1 5.72 0c2.18-1.48 3.14-1.17 3.14-1.17.62 1.58.23 2.74.11 3.03.73.8 1.17 1.82 1.17 3.06 0 4.37-2.68 5.34-5.23 5.62.41.36.78 1.07.78 2.16v3.2c0 .3.21.66.79.55A11.11 11.11 0 0 0 23.1 11.6C23.1 5.33 18.27.5 12 .5Z"/></svg></a>
+            </div>
+          </div>
+          <p class="project-desc">SaaS de gestion de projet avec API REST Django (permissions personnalisées, endpoints de statistiques compatibles FullCalendar) et frontend Angular en composants standalone.</p>
+          <div class="tag-row">
+            <span class="tag">Django REST</span><span class="tag">Angular</span><span class="tag">Tailwind</span><span class="tag">JWT</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-top">
+            <div class="project-title">GyBlood</div>
+            <div class="project-links">
+              <a class="project-link" href="https://github.com/Asanflo/gyblood" target="_blank" rel="noopener" aria-label="Code sur GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.9 5.33.9 11.6c0 5.02 3.26 9.28 7.78 10.78.57.1.78-.25.78-.55v-2.1c-3.17.69-3.84-1.36-3.84-1.36-.52-1.31-1.27-1.66-1.27-1.66-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.24 3.34.95.1-.74.4-1.24.72-1.53-2.53-.29-5.2-1.27-5.2-5.63 0-1.24.44-2.26 1.17-3.06-.12-.29-.51-1.45.11-3.03 0 0 .96-.31 3.14 1.17a10.9 10.9 0 0 1 5.72 0c2.18-1.48 3.14-1.17 3.14-1.17.62 1.58.23 2.74.11 3.03.73.8 1.17 1.82 1.17 3.06 0 4.37-2.68 5.34-5.23 5.62.41.36.78 1.07.78 2.16v3.2c0 .3.21.66.79.55A11.11 11.11 0 0 0 23.1 11.6C23.1 5.33 18.27.5 12 .5Z"/></svg></a>
+            </div>
+          </div>
+          <p class="project-desc">Plateforme de mise en relation de donneurs de sang au Cameroun. Architecture Spring Boot + PostgreSQL + Angular PWA, logique de compatibilité ABO/Rh et notifications FCM.</p>
+          <div class="tag-row">
+            <span class="tag">Spring Boot</span><span class="tag">PWA</span><span class="tag">PostgreSQL</span><span class="tag">FCM</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-top">
+            <div class="project-title">AJVAT</div>
+            <div class="project-links">
+              <a class="project-link" href="https://github.com/Asanflo/ajvat" target="_blank" rel="noopener" aria-label="Code sur GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.9 5.33.9 11.6c0 5.02 3.26 9.28 7.78 10.78.57.1.78-.25.78-.55v-2.1c-3.17.69-3.84-1.36-3.84-1.36-.52-1.31-1.27-1.66-1.27-1.66-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.24 3.34.95.1-.74.4-1.24.72-1.53-2.53-.29-5.2-1.27-5.2-5.63 0-1.24.44-2.26 1.17-3.06-.12-.29-.51-1.45.11-3.03 0 0 .96-.31 3.14 1.17a10.9 10.9 0 0 1 5.72 0c2.18-1.48 3.14-1.17 3.14-1.17.62 1.58.23 2.74.11 3.03.73.8 1.17 1.82 1.17 3.06 0 4.37-2.68 5.34-5.23 5.62.41.36.78 1.07.78 2.16v3.2c0 .3.21.66.79.55A11.11 11.11 0 0 0 23.1 11.6C23.1 5.33 18.27.5 12 .5Z"/></svg></a>
+              <a class="project-link" href="https://asanflo.pythonanywhere.com" target="_blank" rel="noopener" aria-label="Voir le site"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            </div>
+          </div>
+          <p class="project-desc">Site officiel de l'association de jeunesse AJVAT : paiement par Orange Money / MTN MoMo, i18n FR/EN, optimisation d'images WebP et déploiement CI/CD.</p>
+          <div class="tag-row">
+            <span class="tag">Django</span><span class="tag">PostgreSQL</span><span class="tag">Whitenoise</span><span class="tag">CI/CD</span>
+          </div>
+        </div>
+
+      </div>
+      <p style="font-family:'JetBrains Mono',monospace; font-size:11.5px; color:var(--text-muted); margin-top:20px;">
+        * Les liens GitHub sont construits à partir du profil github.com/Asanflo — à vérifier / remplacer si le nom exact du dépôt diffère.
+      </p>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="wrap">
+      <div class="eyebrow">Stack</div>
+      <h2 class="section-title display">Compétences</h2>
+
+      <div class="skills-category">
+        <div class="skills-category-label">Langages &amp; Frameworks</div>
+        <div class="skills-row">
+          <div class="skill-chip"><img src="https://cdn.simpleicons.org/python" alt=""><span>Python</span></div>
+          <div class="skill-chip"><img src="https://cdn.simpleicons.org/openjdk" alt=""><span>Java</span></div>
+          <div class="skill-chip"><img src="https://cdn.simpleicons.org/javascript" alt=""><span>JavaScript</span></div>
+          <div class="skill-chip"><img src="https://cdn.simpleicons.org/typescript" alt=""><span>TypeScript</span></div>
+          <div class="skill-chip"><img src="https://cdn.simpleicons.org/django" alt=""><span>Django REST</span></div>
+          <div class="skill-chip"><img src="https://cdn.simpleicons.org/flask" alt=""><span>Flask</span></div>
+          <div class="skill-chip"><img src="https://cdn.simpleicons.org/spring" alt=""><span>Spring Boot</span></div>
+          <div class="skill-chip"><img src="https://cdn.simpleicons.org/vuedotjs" alt=""><span>Vue.js</span></div>
+          <div class="skill-chip"><img src="https://cdn.simpleicons.org/#0F0F11" alt=""><span>Angular</span></div>
+          <div class="skill-chip"><img src="https://cdn.simpleicons.org/tailwindcss" alt=""><span>Tailwind CSS</span></div>
+        </div>
+      </div>
+
+      <div class="skills-category">
+        <div class="skills-category-label">Architecture &amp; Ingénierie</div>
+        <div class="skills-row">
+          <div class="skill-chip">
+            <svg class="icon-generic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 3 21 3 21 8"/><line x1="21" y1="3" x2="14" y2="10"/><polyline points="8 21 3 21 3 16"/><line x1="3" y1="21" x2="10" y2="14"/></svg>
+            <span>API RESTful</span>
+          </div>
+          <div class="skill-chip">
+            <svg class="icon-generic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
+            <span>Micro-services</span>
+          </div>
+          <div class="skill-chip">
+            <svg class="icon-generic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/><line x1="3" y1="15" x2="21" y2="15"/></svg>
+            <span>Architecture monolithique</span>
+          </div>
+          <div class="skill-chip">
+            <svg class="icon-generic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="12" cy="18" r="2.5"/><line x1="8.2" y1="7.2" x2="10.5" y2="16"/><line x1="15.8" y1="7.2" x2="13.5" y2="16"/><line x1="8.5" y1="6" x2="15.5" y2="6"/></svg>
+            <span>UML / Merise</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="skills-category">
+        <div class="skills-category-label">Bases de données &amp; DevOps</div>
+        <div class="skills-row">
+          <div class="skill-chip"><img src="https://cdn.simpleicons.org/postgresql" alt=""><span>PostgreSQL</span></div>
+          <div class="skill-chip"><img src="https://cdn.simpleicons.org/docker" alt=""><span>Docker</span></div>
+          <div class="skill-chip"><img src="https://cdn.simpleicons.org/git" alt=""><span>Git</span></div>
+          <div class="skill-chip"><img src="https://cdn.simpleicons.org/github" alt=""><span>GitHub</span></div>
+          <div class="skill-chip"><img src="https://cdn.simpleicons.org/render" alt=""><span>Render</span></div>
+        </div>
+      </div>
+
+      <div class="skills-category">
+        <div class="skills-category-label">Cloud &amp; Certifications</div>
+        <div class="skills-row">
+          <div class="skill-chip"><img src="https://cdn.simpleicons.org/ibm" alt=""><span>IBM Cloud Fundamentals</span></div>
+          <div class="skill-chip">
+            <svg class="icon-generic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
+            <span>Architecture Cloud</span>
+          </div>
+          <div class="skill-chip"><img src="https://cdn.simpleicons.org/anthropic" alt=""><span>Claude 101</span></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PARCOURS -->
+  <section id="parcours">
+    <div class="wrap">
+      <div class="eyebrow">Chronologie</div>
+      <h2 class="section-title display">Mon parcours</h2>
+      <div class="timeline">
+
+        <div class="timeline-group">
+          <div class="timeline-label">Formation</div>
+          <div class="timeline-item">
+            <h4>Diplôme d'Ingénieur en Génie Logiciel (GL)</h4>
+            <p>École Nationale Supérieure Polytechnique de Douala — Université de Douala</p>
+            <span class="timeline-meta">Octobre 2024 – Juillet 2027 (prévu) · Douala</span>
+          </div>
+          <div class="timeline-item">
+            <h4>Licence Technologique</h4>
+            <p>Institut Universitaire de Ngaoundéré — Université de Ngaoundéré</p>
+            <span class="timeline-meta">Juillet 2024 · Ngaoundéré</span>
+          </div>
+        </div>
+
+        <div class="timeline-group">
+          <div class="timeline-label">Expérience professionnelle</div>
+          <div class="timeline-item">
+            <h4>Full-Stack Developer Intern — ASECNA</h4>
+            <p>Digitalisation du suivi des rapports d'opérations journaliers (PV), déploiement conteneurisé avec Docker.</p>
+            <span class="timeline-meta">Août – Septembre 2025 · Garoua</span>
+          </div>
+          <div class="timeline-item">
+            <h4>IT Network &amp; Risk Management Intern — CENADI</h4>
+            <p>Cartographie des risques d'infrastructure réseau en salle serveur, matrice de risques structurée avec la méthode EBIOS-RM.</p>
+            <span class="timeline-meta">Avril – Juillet 2024 · Yaoundé</span>
+          </div>
+          <div class="timeline-item">
+            <h4>Backend Developer Intern — SODECOTON</h4>
+            <p>Conception d'une application web de suivi de la consommation électrique des groupes électrogènes.</p>
+            <span class="timeline-meta">Mars – Mai 2023 · Garoua</span>
+          </div>
+        </div>
+
+        <div class="timeline-group">
+          <div class="timeline-label">Certifications</div>
+          <div class="timeline-item">
+            <h4>Cloud Computing Fundamentals</h4>
+            <p>IBM</p>
+          </div>
+          <div class="timeline-item">
+            <h4>Python Django 101</h4>
+            <p>Simplilearn</p>
+          </div>
+          <div class="timeline-item">
+            <h4>Claude 101</h4>
+            <p>Anthropic</p>
+          </div>
+        </div>
+
+        <div class="timeline-group">
+          <div class="timeline-label">Hackathons</div>
+          <div class="timeline-item">
+            <h4>MIABE Hackathon</h4>
+            <p>Conception de CoopEnergie, une plateforme coopérative solaire sur blockchain — landing page, pitch deck et documentation technique livrés en équipe.</p>
+          </div>
+          div class="timeline-item">
+            <h4>PNUD-ODC</h4>
+            <p>Conception d'une plateforme de publicités ciblées.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="wrap contact-grid">
+      <div class="contact-info">
+        <div class="eyebrow">Contact</div>
+        <h2 class="section-title display">Discutons</h2>
+
+        <div class="contact-info-item">
+          <div class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z" opacity="0"/><path d="M22 6 12 13 2 6"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg></div>
+          <div>
+            <strong>Email</strong>
+            <a href="mailto:agassemflorentin@gmail.com">agassemflorentin@gmail.com</a>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <div class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+          <div>
+            <strong>Téléphone</strong>
+            <a href="tel:+237697117458">+237 697 117 458</a>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <div class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div>
+            <strong>Localisation</strong>
+            <span>Douala, PK-17, Cameroun</span>
+          </div>
+        </div>
+      </div>
+
+      <form class="contact-form" onsubmit="return false;">
+        <div class="form-row">
+          <div class="field">
+            <label for="name">Nom</label>
+            <input type="text" id="name" placeholder="Votre nom">
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="vous@exemple.com">
+          </div>
+        </div>
+        <div class="field">
+          <label for="subject">Sujet</label>
+          <input type="text" id="subject" placeholder="Objet du message">
+        </div>
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea id="message" rows="5" placeholder="Votre message…"></textarea>
+        </div>
+        <button class="btn btn-primary" type="submit">Envoyer le message</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap footer-row">
+    <span>© 2026 Agassem Sanda Florentin — tous droits réservés</span>
+    <span>Douala, Cameroun</span>
+  </div>
+</footer>
+<script src="script.js"></script>
+<script src="api/chat.js"></script>
+</body>
+</html>
